@@ -25,10 +25,7 @@ public class UnitCreationMenu : MonoBehaviour
     public GameObject introductoryExplanation;
     public InputField nameField;
     public Image image;
-    public GameObject noticePrompt;
-    public Text noticePromptText;
-    public GameObject inputPrompt;
-    public Text inputPromptText;
+    public PromptManager prompts;
     public Transform unitToSummonContainer;
 
     [Header("Component References")]
@@ -81,30 +78,30 @@ public class UnitCreationMenu : MonoBehaviour
     {
         bool valid = true;
 
-        noticePromptText.text = "";
+        string text = "";
         if (units.transform.childCount >= player.maxUnits)
         {
-            noticePromptText.text += "You have the maximum number of units.\n";
+            text += "You have the maximum number of units.\n";
             valid = false;
         }
         if (nameField.text.Length == 0)
         {
-            noticePromptText.text += "You have not named your unit.\n";
+            text += "You have not named your unit.\n";
             valid = false;
         }
         else if (nameField.text.Length > player.maxUnitNameLength)
         {
-            noticePromptText.text += "Your unit's name is too long (max " + player.maxUnitNameLength + ").\n";
+            text += "Your unit's name is too long (max " + player.maxUnitNameLength + ").\n";
             valid = false;
         }
         if (image.sprite == defaultImage)
         {
-            noticePromptText.text += "You have not selected an image.\n";
+            text += "You have not selected an image.\n";
             valid = false;
         }
         if (introductoryExplanation.activeSelf)
         {
-            noticePromptText.text += "You have not selected a class.\n";
+            text += "You have not selected a class.\n";
             valid = false;
         }
 
@@ -116,7 +113,7 @@ public class UnitCreationMenu : MonoBehaviour
         }
         else
         {
-            noticePrompt.SetActive(true);
+            prompts.ShowNoticePrompt(text);
         }
     }
 
@@ -165,6 +162,11 @@ public class UnitCreationMenu : MonoBehaviour
 
     public void ImportFromWeb()
     {
-        throw new NotImplementedException();
+        prompts.ShowInputPrompt("Enter URL...", OnOk);
+
+        void OnOk()
+        {
+            Debug.Log(InputPrompt.lastInput);
+        }
     }
 }

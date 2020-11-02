@@ -3,8 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /*
- * Changes the colors of a button group depending on which is selected.
- * Also provides information as to what class is selected.
+ * Changes the normal colors of a button if it was last selected in the group.
+ * Workaround to the button deselecting itself.
  */
 
 public class UnitClassSelectionButtonGroup : MonoBehaviour
