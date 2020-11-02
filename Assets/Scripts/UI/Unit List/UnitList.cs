@@ -46,6 +46,10 @@ public class UnitList : MonoBehaviour
                 {
                     panel.GetComponent<UnitPanel>().curUnit = curUnits[i];
                 }
+                else
+                {
+                    panel.GetComponent<UnitPanel>().curUnit = null;
+                }
             }
             i++;
         }

@@ -14,6 +14,7 @@ public class InputPrompt : MonoBehaviour
     [Header("Component References")]
     public InputField inputField;
     public Button okButton;
+    public Button cancelButton;
 
     void Update()
     {
@@ -23,5 +24,6 @@ public class InputPrompt : MonoBehaviour
     void Start()
     {
         okButton.onClick.AddListener(delegate { Destroy(gameObject); });
+        cancelButton.onClick.AddListener(delegate { Destroy(gameObject); });
     }
 }

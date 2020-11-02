@@ -69,7 +69,7 @@ public class PromptManager : MonoBehaviour
         }
     }
 
-    public void ShowInputPrompt(string text, UnityAction onOk = null)
+    public void ShowInputPrompt(string text, UnityAction onOk = null, UnityAction onCancel = null)
     {
         InputPrompt inputPrompt = Instantiate(inputPromptTemplate, transform);
         inputPrompt.inputField.placeholder.GetComponent<Text>().text = text;
@@ -77,6 +77,11 @@ public class PromptManager : MonoBehaviour
         if (onOk != null)
         {
             inputPrompt.okButton.onClick.AddListener(onOk);
+        }
+
+        if (onCancel != null)
+        {
+            inputPrompt.okButton.onClick.AddListener(onCancel);
         }
     }
 }
