@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 using SimpleFileBrowser;
 
 /*
@@ -166,7 +167,22 @@ public class UnitCreationMenu : MonoBehaviour
 
         void OnOk()
         {
-            Debug.Log(InputPrompt.lastInput);
+            StartCoroutine(LoadImage());
+
+            IEnumerator LoadImage()
+            {
+                UnityWebRequest request = UnityWebRequestTexture.GetTexture(InputPrompt.input);
+                yield return request.SendWebRequest();
+                if (request.isNetworkError || request.isHttpError)
+                {
+                    Debug.LogError(request.error);
+                }
+                else
+                {
+                    Texture2D tex = ((DownloadHandlerTexture)request.downloadHandler).texture;
+                    image.sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                }
+            }
         }
     }
 }
