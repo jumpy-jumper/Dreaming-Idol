@@ -13,15 +13,15 @@ public abstract class Unit : MonoBehaviour
 {
     public Sprite avatar;
 
-    public BigInteger maxHP;
-    public BigInteger HP;
-    public bool Alive { get => HP > 0; }
-    public float HPPercentage { get => (float)(HP * 1000 / maxHP) / 1000; }
+    public BigInteger maxHp;
+    public BigInteger hp;
+    public bool Alive { get => hp > 0; }
+    public float HPPercentage { get => (float)(hp * 1000 / maxHp) / 1000; }
 
-    public BigInteger TOP;
-    public BigInteger BOT;
+    public BigInteger top;
+    public BigInteger bot;
 
-    public BigInteger EXP;
+    public BigInteger exp;
 
     public World curWorld;
     public BigInteger curFloor;

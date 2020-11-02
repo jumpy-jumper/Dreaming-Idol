@@ -21,10 +21,10 @@ public class InitializeUnit : MonoBehaviour
     void Start()
     {
         unitComponent = GetComponent<Unit>();
-        unitComponent.maxHP = BigInteger.Parse(startingMaxHP);
-        unitComponent.HP = BigInteger.Parse(startingHP);
-        unitComponent.TOP = BigInteger.Parse(startingATK);
-        unitComponent.BOT = BigInteger.Parse(startingDEF);
-        unitComponent.EXP = BigInteger.Parse(startingEXP);
+        unitComponent.maxHp = BigInteger.Parse(startingMaxHP);
+        unitComponent.hp = BigInteger.Parse(startingHP);
+        unitComponent.top = BigInteger.Parse(startingATK);
+        unitComponent.bot = BigInteger.Parse(startingDEF);
+        unitComponent.exp = BigInteger.Parse(startingEXP);
     }
 }

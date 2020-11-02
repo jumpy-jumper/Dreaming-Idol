@@ -49,11 +49,11 @@ public class UnitInspector : MonoBehaviour
             classText.color = curUnit.GetClassColor();
             atkNameplate.text = curUnit.GetTopAlias();
             defNameplate.text = curUnit.GetBotAlias();
-            maxHpValue.text = BigIntegerAdditions.ToString(curUnit.maxHP, 8);
-            hpValue.text = BigIntegerAdditions.ToString(curUnit.HP, 8);
-            atkValue.text = BigIntegerAdditions.ToString(curUnit.TOP, 8);
-            defValue.text = BigIntegerAdditions.ToString(curUnit.BOT, 8);
-            expValue.text = BigIntegerAdditions.ToString(curUnit.EXP, 8);
+            maxHpValue.text = BigIntegerAdditions.ToString(curUnit.maxHp, 8);
+            hpValue.text = BigIntegerAdditions.ToString(curUnit.hp, 8);
+            atkValue.text = BigIntegerAdditions.ToString(curUnit.top, 8);
+            defValue.text = BigIntegerAdditions.ToString(curUnit.bot, 8);
+            expValue.text = BigIntegerAdditions.ToString(curUnit.exp, 8);
 
             if (curUnit.curWorld)
             {
