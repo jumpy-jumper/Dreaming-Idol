@@ -68,11 +68,6 @@ public class Unit : MonoBehaviour
         Destroy(enemy);
     }
 
-    void Consume(Item item)
-    {
-
-    }
-
     public string GetClass()
     {
         switch (type)
