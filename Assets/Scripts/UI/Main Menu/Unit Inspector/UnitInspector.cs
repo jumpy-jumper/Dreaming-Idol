@@ -49,11 +49,11 @@ public class UnitInspector : MonoBehaviour
             classText.color = curUnit.GetClassColor();
             atkNameplate.text = curUnit.GetTopAlias();
             defNameplate.text = curUnit.GetBotAlias();
-            maxHpValue.text = BigIntegerAdditions.ToString(curUnit.maxHp, 8);
-            hpValue.text = BigIntegerAdditions.ToString(curUnit.hp, 8);
-            atkValue.text = BigIntegerAdditions.ToString(curUnit.top, 8);
-            defValue.text = BigIntegerAdditions.ToString(curUnit.bot, 8);
-            expValue.text = BigIntegerAdditions.ToString(curUnit.exp, 8);
+            maxHpValue.text = BigIntegerUtilities.ToString(curUnit.maxHp, 8);
+            hpValue.text = BigIntegerUtilities.ToString(curUnit.hp, 8);
+            atkValue.text = BigIntegerUtilities.ToString(curUnit.top, 8);
+            defValue.text = BigIntegerUtilities.ToString(curUnit.bot, 8);
+            expValue.text = BigIntegerUtilities.ToString(curUnit.exp, 8);
 
             if (curUnit.curWorld)
             {
@@ -62,7 +62,7 @@ public class UnitInspector : MonoBehaviour
                 worldText.text = curUnit.curWorld.displayName;
                 worldImage.sprite = curUnit.curWorld.sprite;
                 worldImage.gameObject.SetActive(true);
-                floorText.text = "F" + BigIntegerAdditions.ToString(curUnit.curFloor, 8);
+                floorText.text = "F" + BigIntegerUtilities.ToString(curUnit.curFloor, 8);
                 floorText.gameObject.SetActive(true);
             }
             else

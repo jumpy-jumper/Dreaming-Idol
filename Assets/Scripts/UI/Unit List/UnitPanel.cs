@@ -41,11 +41,10 @@ public class UnitPanel : MonoBehaviour
 
             int atkExp = (int)BigInteger.Log10(curUnit.top);
             int defExp = (int)BigInteger.Log10(curUnit.bot);
-            int expPad = Mathf.Max((int)Mathf.Log10(atkExp), (int)Mathf.Log10(defExp)) + 1;
             stats.text = "";
-            stats.text += curUnit.GetTopAlias() + " " + BigIntegerAdditions.ToString(curUnit.top, 5, 8, expPad);
+            stats.text += curUnit.GetTopAlias() + " " + BigIntegerUtilities.ToString(curUnit.top, 5, 8);
             stats.text += "\n";
-            stats.text += curUnit.GetBotAlias() + " " + BigIntegerAdditions.ToString(curUnit.bot, 5, 8, expPad);
+            stats.text += curUnit.GetBotAlias() + " " + BigIntegerUtilities.ToString(curUnit.bot, 5, 8);
 
             avatar.gameObject.SetActive(true);
             avatar.sprite = curUnit.avatar;

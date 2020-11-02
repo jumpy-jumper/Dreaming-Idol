@@ -71,10 +71,10 @@ public class UnitCreationMenu : MonoBehaviour
         atkNameplate.text = unitToSummon.GetTopAlias();
         defNameplate.text = unitToSummon.GetBotAlias();
 
-        poolText.text = BigIntegerAdditions.ToString(player.newUnitPool, 5);
-        hpText.text = BigIntegerAdditions.ToString(unitToSummon.maxHp, 5);
-        atkText.text = BigIntegerAdditions.ToString(unitToSummon.top, 5);
-        defText.text = BigIntegerAdditions.ToString(unitToSummon.bot, 5);
+        poolText.text = BigIntegerUtilities.ToString(player.newUnitPool, 5);
+        hpText.text = BigIntegerUtilities.ToString(unitToSummon.maxHp, 5);
+        atkText.text = BigIntegerUtilities.ToString(unitToSummon.top, 5);
+        defText.text = BigIntegerUtilities.ToString(unitToSummon.bot, 5);
     }
 
     public void Summon()
