@@ -1,15 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Menu that shows detailed information about one unit.
+ * 
+ * If a unit has not been assigned, immediately deactivates itself.
+ */
+
 public class UnitInspector : MonoBehaviour
 {
     [Header("World References")]
     public Unit curUnit;
 
     [Header("Scene References")]
+    // Basic Information
     public Text nameText;
     public Image avatar;
     public Text classText;
+
+    // Stats Information
     public Text atkNameplate;
     public Text defNameplate;
     public Text maxHpValue;
@@ -18,8 +27,9 @@ public class UnitInspector : MonoBehaviour
     public Text defValue;
     public Text expValue;
 
-    public GameObject deployed;
-    public GameObject notDeployed;
+    // World Information
+    public GameObject deployedUI;
+    public GameObject notDeployedUI;
     public Text worldText;
     public Image worldImage;
     public Text floorText;
@@ -47,8 +57,8 @@ public class UnitInspector : MonoBehaviour
 
             if (curUnit.curWorld)
             {
-                notDeployed.gameObject.SetActive(false);
-                deployed.gameObject.SetActive(true);
+                notDeployedUI.gameObject.SetActive(false);
+                deployedUI.gameObject.SetActive(true);
                 worldText.text = curUnit.curWorld.displayName;
                 worldImage.sprite = curUnit.curWorld.sprite;
                 worldImage.gameObject.SetActive(true);
@@ -57,8 +67,8 @@ public class UnitInspector : MonoBehaviour
             }
             else
             {
-                deployed.gameObject.SetActive(false);
-                notDeployed.gameObject.SetActive(true);
+                deployedUI.gameObject.SetActive(false);
+                notDeployedUI.gameObject.SetActive(true);
                 worldImage.gameObject.SetActive(false);
                 floorText.gameObject.SetActive(false);
             }

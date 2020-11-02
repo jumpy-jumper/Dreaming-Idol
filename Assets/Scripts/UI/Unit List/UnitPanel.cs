@@ -2,23 +2,29 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Displays information for one unit.
+ */
+
 public class UnitPanel : MonoBehaviour
 {
     [Header("World References")]
     public Unit curUnit;
 
-    [Header("Component References")]
+    [Header("UI References")]
+    public GameObject createUnitMenu;
+    public UnitInspector inspectUnitMenu;
+
+    [Header("Component References - Alive")]
+    public CanvasGroup aliveUI;
     public Image avatar;
     public Slider health;
     public Image healthFill;
     public Text stats;
-    public CanvasGroup alive;
-    public CanvasGroup dead;
-    public Image deadX;
 
-    [Header("Scene References")]
-    public GameObject createUnitMenu;
-    public UnitInspector inspectUnitMenu;
+    [Header("Component References - Dead")]
+    public CanvasGroup deadUI;
+    public Image deadX;
 
     void Update()
     {
@@ -30,7 +36,7 @@ public class UnitPanel : MonoBehaviour
         }
         else
         {
-            alive.gameObject.SetActive(true);
+            aliveUI.gameObject.SetActive(true);
             stats.gameObject.SetActive(true);
 
             int atkExp = (int)BigInteger.Log10(curUnit.TOP);
@@ -50,7 +56,13 @@ public class UnitPanel : MonoBehaviour
         }
     }
 
-    public void LoadUnitMenu()
+    /*
+     * Meant to listen to a Unity Event.
+     * If the panel has a unit, shows the Unit Inspection menu for that unit.
+     * Otherwise, shows the Unit Creation menu.
+     */
+
+    public void ShowUnitMenu()
     {
         if (!curUnit)
         {

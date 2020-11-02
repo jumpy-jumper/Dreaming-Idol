@@ -771,15 +771,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curUnit: {fileID: 0}
+  createUnitMenu: {fileID: 0}
+  inspectUnitMenu: {fileID: 0}
+  aliveUI: {fileID: 5901880045840676740}
   avatar: {fileID: 5901880045825631013}
   health: {fileID: 5901880045597501097}
   healthFill: {fileID: 5901880045817563797}
   stats: {fileID: 2955738522490425057}
-  alive: {fileID: 5901880045840676740}
-  dead: {fileID: 5901880045295990557}
+  deadUI: {fileID: 5901880045295990557}
   deadX: {fileID: 5901880045576663164}
-  createUnitMenu: {fileID: 0}
-  inspectUnitMenu: {fileID: 0}
 --- !u!114 &5904769077328282679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,7 +825,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5901880046394157632}
         m_TargetAssemblyTypeName: UnitPanel, Assembly-CSharp
-        m_MethodName: LoadUnitMenu
+        m_MethodName: ShowUnitMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

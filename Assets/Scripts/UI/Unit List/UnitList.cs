@@ -15,14 +15,16 @@ public class UnitList : MonoBehaviour
     public Transform units;
 
     [Header("UI References")]
-    public List<UnitPanel> panels = new List<UnitPanel>();
+    public Transform panels;
 
+    /*
+     * The Update method calls GetComponent twice per unit,
+     * but because there may only be one UnitList at a time,
+     * this is not a big performance hit.
+     * 
+     * This is also the simplest way to architecture this functionality.
+     */
     void Update()
-    {
-        UpdateUnitList();
-    }
-
-    public void UpdateUnitList()
     {
         List<Unit> curUnits = new List<Unit>();
         foreach (Transform unit in units)
@@ -31,7 +33,7 @@ public class UnitList : MonoBehaviour
         }
 
         int i = 0;
-        foreach(UnitPanel panel in panels)
+        foreach (Transform panel in panels)
         {
             if (i >= player.maxUnits)
             {
@@ -42,7 +44,7 @@ public class UnitList : MonoBehaviour
                 panel.gameObject.SetActive(true);
                 if (i < curUnits.Count)
                 {
-                    panel.curUnit = curUnits[i];
+                    panel.GetComponent<UnitPanel>().curUnit = curUnits[i];
                 }
             }
             i++;

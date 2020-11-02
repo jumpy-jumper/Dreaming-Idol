@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Allows the user to destroy a unit's game object.
+ */
+
 public class UnitDeleteButton : MonoBehaviour
 {
     public UnitInspector unitMenu;
