@@ -1,0 +1,37 @@
+Title
+    UI Stuff
+        New Game Button
+        Challenge Button
+        Load Button
+        Settings Button
+        Quit Button
+Main
+    Camera
+    Player
+    Worlds
+        World 1...
+        ...World x
+    Units
+        Unit 1...
+        ...Unit x
+    UI Stuff
+        Help Panel
+        Unit List
+            Unit 1 Panel...
+            ...Unit x Panel
+        Main Menu
+
+            Stats Button
+            Settings Button
+            Save Button
+            Load Button
+            Quit Button
+        Main Panel (only one child active at a time)
+            Unit Creation Panel
+            Unit Management Panel
+            Idol Panel
+            World Panel
+            Inventory Panel
+            Stats Panel
+            Settings Panel
+        Text Panel

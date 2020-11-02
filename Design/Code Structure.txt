@@ -1,0 +1,15 @@
+MonoBehaviours
+    Player
+    Unit (abstract)
+        Fighter
+        Explorer
+        Gatherer
+        Crafter
+    World (abstract)
+        World 1...
+        ...World x
+ScriptableObjects
+    Enemy
+    Item
+Basic Classes
+    Inventory

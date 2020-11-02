@@ -1,0 +1,6 @@
+Unlock Heaven's Rooftop Floor 1
+    Reaching specific milestones with each class unlocks an additional unit slot (except for the final class)
+        Fighter: 
+        Explorer: Find the Boss
+        Gatherer: Find the 
+        Crafter: 

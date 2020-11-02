@@ -1,0 +1,33 @@
+Unit Creation    
+    Player can create new units from scratch using their own graphic.
+    Units have a variety of attributes that help them succeed in adventure.
+    Units can specialize in various skills.
+    The maximum number of units is small.
+Adventure
+    Units can be deployed to various places in the world.
+    Every _ frames, the adventure world ticks and the unit performs an action.
+    Each world has their own tick rate
+    Units can battle, gather, craft, explore, or bond with other units
+    Actions are automated based on the unit's gambits (the player can't control units directly)
+Worlds
+    Each world has their own characteristics that require particular approaches from the player's units
+    Units can be deployed to one world at a time
+    When the player defeats the final boss of world n, they can deploy units to world n+1, a buffed version of the world
+    Buffed worlds provide better rewards
+Shrines
+    Each world has their own god watching over them
+    The player can nerf worlds by giving something up to the world's god
+Gambits
+    Dictate unit behavior in adventure
+    The main gambit describes what the unit will do every tick
+        Look for enemies, look for gathering nodes, look to craft, look to bond
+Bonding
+    Units can bond with other units
+Equipment
+    Units have equipment slots.
+Abilities
+    Units have ability slots.
+Rebirth
+    Units can be Reborn as a different unit
+    This provides the new unit multiplicative boosts to growth based on the previous unit's growth.
+    Reborn units lose all their bonds.

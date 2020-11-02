@@ -1,0 +1,7 @@
+- Realize the idea that an idle game is most fun when you have something cool to come back to after idling.
+- Optimization exists just below a level of complexity that is unreasonable to model.
+- The optimal choice is independent of whether the player will play or idle.
+    (the game is always "Idle-Ready" and "Play-Ready" after an atomic play-action)
+- The player will play or idle based on desire, not optimality.
+- Satisfying RPG-like growth of player-created units.
+- Avoid using position as a mechanical element.
