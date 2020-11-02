@@ -8,10 +8,10 @@ using UnityEngine.UI;
 public class UnitDeleteButton : MonoBehaviour
 {
     public UnitInspector unitMenu;
-    public PromptManager promptManager;
+    public PromptCanvas promptCanvas;
 
     public void DeletePrompt()
     {
-        promptManager.ShowConfirmationPrompt("Delete " + unitMenu.curUnit.name + "?", delegate { Destroy(unitMenu.curUnit.gameObject); } );
+        promptCanvas.ShowConfirmationPrompt("Delete " + unitMenu.curUnit.name + "?", delegate { Destroy(unitMenu.curUnit.gameObject); } );
     }
 }

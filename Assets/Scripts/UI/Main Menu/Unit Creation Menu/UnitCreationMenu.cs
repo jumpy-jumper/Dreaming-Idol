@@ -26,7 +26,7 @@ public class UnitCreationMenu : MonoBehaviour
     public GameObject introductoryExplanation;
     public InputField nameField;
     public Image image;
-    public PromptManager prompts;
+    public PromptCanvas promptCanvas;
     public Transform unitToSummonContainer;
 
     [Header("Component References")]
@@ -114,7 +114,7 @@ public class UnitCreationMenu : MonoBehaviour
         }
         else
         {
-            prompts.ShowNoticePrompt(text);
+            promptCanvas.ShowNoticePrompt(text);
         }
     }
 
@@ -163,7 +163,7 @@ public class UnitCreationMenu : MonoBehaviour
 
     public void ImportFromWeb()
     {
-        prompts.ShowInputPrompt("Enter URL...", OnOk);
+        promptCanvas.ShowInputPrompt("Enter URL...", OnOk);
 
         void OnOk()
         {

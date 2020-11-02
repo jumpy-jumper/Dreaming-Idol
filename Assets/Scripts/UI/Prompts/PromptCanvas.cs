@@ -8,7 +8,7 @@ using UnityEngine.Events;
  * Also provides public methods to spawn prompts.
  */
 
-public class PromptManager : MonoBehaviour
+public class PromptCanvas : MonoBehaviour
 {
     [Header("Inspector Variables")]
     public float blockedAlpha = 0.5f;
