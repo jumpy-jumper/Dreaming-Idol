@@ -1,18 +1,21 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
+
+/*
+ * Uses player and unit information to build a unit list
+ * with pre-spawned panels in the scene.
+ * 
+ * The unit list refreshes every frame.
+ */
 
 public class UnitList : MonoBehaviour
 {
+    [Header("World References")]
     public Player player;
     public Transform units;
-    public List<UnitPanel> panels = new List<UnitPanel>();
-    public UnitPanel template;
-    public GameObject createUnitMenu;
-    public UnitMenu inspectUnitMenu;
 
-    public int horizontalSpacing;
+    [Header("UI References")]
+    public List<UnitPanel> panels = new List<UnitPanel>();
 
     void Update()
     {

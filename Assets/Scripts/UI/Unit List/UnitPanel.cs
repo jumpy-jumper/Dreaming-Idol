@@ -18,7 +18,7 @@ public class UnitPanel : MonoBehaviour
 
     [Header("Scene References")]
     public GameObject createUnitMenu;
-    public UnitMenu inspectUnitMenu;
+    public UnitInspector inspectUnitMenu;
 
     void Update()
     {
@@ -46,7 +46,7 @@ public class UnitPanel : MonoBehaviour
 
             health.gameObject.SetActive(true);
             health.value = curUnit.HPPercentage;
-            healthFill.color = curUnit.GetColor();
+            healthFill.color = curUnit.GetClassColor();
         }
     }
 

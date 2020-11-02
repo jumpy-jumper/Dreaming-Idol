@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using SimpleFileBrowser;
 using System.IO;
 
-public class UnitCreation : MonoBehaviour
+public class UnitCreationMenu : MonoBehaviour
 {
 
     Unit unitToSummon;
@@ -115,7 +115,7 @@ public class UnitCreation : MonoBehaviour
 
     public void ChangeClass(int type)
     {
-        unitToSummon.unitClass = (Unit.UnitClass)type;
+        // unitToSummon.unitClass = (Unit.UnitClass)type;
     }
 
     public void ImportFromFile()

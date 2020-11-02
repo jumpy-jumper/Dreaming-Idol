@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class UnitMenu : MonoBehaviour
+public class UnitInspector : MonoBehaviour
 {
     [Header("World References")]
     public Unit curUnit;
@@ -33,10 +33,10 @@ public class UnitMenu : MonoBehaviour
         else
         {
             nameText.text = curUnit.name;
-            nameText.color = curUnit.GetColor();
+            nameText.color = curUnit.GetClassColor();
             avatar.sprite = curUnit.avatar;
-            classText.text = curUnit.GetClass().ToUpper();
-            classText.color = curUnit.GetColor();
+            classText.text = curUnit.GetClassName().ToUpper();
+            classText.color = curUnit.GetClassColor();
             atkNameplate.text = curUnit.GetTopAlias();
             defNameplate.text = curUnit.GetBotAlias();
             maxHpValue.text = BigIntegerAdditions.ToString(curUnit.maxHP, 8);

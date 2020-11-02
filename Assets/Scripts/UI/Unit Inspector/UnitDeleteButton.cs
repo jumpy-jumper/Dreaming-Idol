@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UnitDeleteButton : MonoBehaviour
 {
-    public UnitMenu unitMenu;
+    public UnitInspector unitMenu;
 
     public GameObject prompt;
     public Text text;
