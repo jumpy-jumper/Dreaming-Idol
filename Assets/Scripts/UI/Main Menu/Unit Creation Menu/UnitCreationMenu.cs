@@ -64,7 +64,7 @@ public class UnitCreationMenu : MonoBehaviour
         unitToSummon.name = nameField.text;
         unitToSummon.avatar = image.sprite;
 
-        unitToSummon.maxHp = player.newUnitPool * player.hpFromPool;
+        unitToSummon.maxHp = player.newUnitPool * player.hpMultiplier;
         unitToSummon.top = player.newUnitPool * ((int)atkSlider.value * 10 / (int)atkSlider.maxValue) / 10;
         unitToSummon.bot = player.newUnitPool * ((int)defSlider.value * 10 / (int)defSlider.maxValue) / 10;
 
