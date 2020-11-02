@@ -17,16 +17,4 @@ public class World : MonoBehaviour
     {
         actTime++;
     }
-
-    public List<Enemy> encounters;
-    public Enemy MakeEnemy()
-    {
-        Enemy ret = Instantiate(encounters[0]);
-
-        ret.HP = ret.startingHP;
-        ret.ATK = ret.startingATK;
-        ret.DEF = ret.startingDEF;
-
-        return ret;
-    }
 }

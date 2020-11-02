@@ -37,12 +37,12 @@ public class UnitMenu : MonoBehaviour
             avatar.sprite = curUnit.avatar;
             classText.text = curUnit.GetClass().ToUpper();
             classText.color = curUnit.GetColor();
-            atkNameplate.text = curUnit.GetAtkAlias();
-            defNameplate.text = curUnit.GetDefAlias();
+            atkNameplate.text = curUnit.GetTopAlias();
+            defNameplate.text = curUnit.GetBotAlias();
             maxHpValue.text = BigIntegerAdditions.ToString(curUnit.maxHP, 8);
             hpValue.text = BigIntegerAdditions.ToString(curUnit.HP, 8);
-            atkValue.text = BigIntegerAdditions.ToString(curUnit.ATK, 8);
-            defValue.text = BigIntegerAdditions.ToString(curUnit.DEF, 8);
+            atkValue.text = BigIntegerAdditions.ToString(curUnit.TOP, 8);
+            defValue.text = BigIntegerAdditions.ToString(curUnit.BOT, 8);
             expValue.text = BigIntegerAdditions.ToString(curUnit.EXP, 8);
 
             if (curUnit.curWorld)

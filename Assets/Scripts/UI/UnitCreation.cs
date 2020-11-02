@@ -101,21 +101,21 @@ public class UnitCreation : MonoBehaviour
     public void Update()
     {
         unitToSummon.maxHP = player.newUnitPool * player.hpFromPool;
-        unitToSummon.ATK = player.newUnitPool * ((int)atkSlider.value * 10 / (int)atkSlider.maxValue) / 10;
-        unitToSummon.DEF = player.newUnitPool * ((int)defSlider.value * 10 / (int)defSlider.maxValue) / 10;
+        unitToSummon.TOP = player.newUnitPool * ((int)atkSlider.value * 10 / (int)atkSlider.maxValue) / 10;
+        unitToSummon.BOT = player.newUnitPool * ((int)defSlider.value * 10 / (int)defSlider.maxValue) / 10;
 
-        atkNameplate.text = unitToSummon.GetAtkAlias();
-        defNameplate.text = unitToSummon.GetDefAlias();
+        atkNameplate.text = unitToSummon.GetTopAlias();
+        defNameplate.text = unitToSummon.GetBotAlias();
 
         poolText.text = BigIntegerAdditions.ToString(player.newUnitPool, 5);
         hpText.text = BigIntegerAdditions.ToString(unitToSummon.maxHP, 5);
-        atkText.text = BigIntegerAdditions.ToString(unitToSummon.ATK, 5);
-        defText.text = BigIntegerAdditions.ToString(unitToSummon.DEF, 5);
+        atkText.text = BigIntegerAdditions.ToString(unitToSummon.TOP, 5);
+        defText.text = BigIntegerAdditions.ToString(unitToSummon.BOT, 5);
     }
 
     public void ChangeClass(int type)
     {
-        unitToSummon.type = (Unit.Type)type;
+        unitToSummon.unitClass = (Unit.UnitClass)type;
     }
 
     public void ImportFromFile()
